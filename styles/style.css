@@ -141,7 +141,7 @@
   z-index: 1;
 }
 
-@supports ((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
+@supports ((text-stroke: 0.5px(--background-color,)) or (-webkit-text-stroke: 0.5px (--background-color))) {
   .card_lebel {
     -webkit-text-stroke: 0.5px var(--background-color); /*по макету там обводка в 1рх, но цвет контура почему-то съедает буквы, поэтому я указала меньше,мне показалось так выглядит симпатичнее*/
     text-stroke: 1px var(--background-color);
@@ -375,6 +375,7 @@
 .dialog[open] {
   background-color: var(--background-color);
   min-inline-size: 341px;
+  min-block-size: 191px;
   display: flex;
   flex-direction: column;
   align-items: center;
