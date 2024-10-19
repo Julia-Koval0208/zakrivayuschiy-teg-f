@@ -12,7 +12,7 @@
     ),
     linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
   --accent-fonts: "PressStart2P", "Arial", "Helvetica", sans-serif;
-  --main-fonts: "Inter", "Arial", "Helvetica", sans-serif;
+  --main-fonts: "Inter-Variable", "Arial", "Helvetica", sans-serif;
   --font-weight-s: 400;
   --font-weight-l: 700;
   --font-size-18: 18px;
