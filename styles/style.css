@@ -24,6 +24,7 @@
   margin: 0 auto;
   inline-size: min(100%, 700px);
   margin-block-start: 100px;
+  font-variation-settings: 'wght' var(--font-weight-s), 'wdth' 0, 'opsz' 0;
 }
 
 .header {
@@ -93,7 +94,6 @@
 
 .section_text {
   font-style: normal;
-  font-weight: var(--font-weight-s);
   font-size: var(--font-size-18);
   line-height: 21px;
   color: var(--accent-color);
@@ -109,7 +109,6 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  inline-size: 100%;
   background-color: var(--background-color);
   inline-size: min(100%, 696px);
 }
@@ -141,9 +140,9 @@
   z-index: 1;
 }
 
-@supports ((text-stroke: 0.5px(--background-color,)) or (-webkit-text-stroke: 0.5px (--background-color))) {
+@supports ((text-stroke: 1px(--background-color,)) or (-webkit-text-stroke: 1px (--background-color))) {
   .card_lebel {
-    -webkit-text-stroke: 0.5px var(--background-color); /*по макету там обводка в 1рх, но цвет контура почему-то съедает буквы, поэтому я указала меньше,мне показалось так выглядит симпатичнее*/
+    -webkit-text-stroke: 1px var(--background-color); /*по макету там обводка в 1рх, но цвет контура почему-то съедает буквы, поэтому я указала меньше,мне показалось так выглядит симпатичнее*/
     text-stroke: 1px var(--background-color);
     text-shadow: none;
   }
@@ -199,7 +198,6 @@
 .button__text {
   font-family: var(--accent-fonts);
   font-style: normal;
-  font-weight: var(--font-weight-s);
   font-size: 14px;
   line-height: 90%;
   position: relative;
@@ -461,7 +459,6 @@ dialog::backdrop {
   }
 
   .header_title {
-    margin-block-end: 33px;
     margin-block-end: 14px;
   }
 
