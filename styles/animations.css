@@ -12,7 +12,7 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
-@keyframes move {
+@keyframes MovingRightLeft {
   from {
     transform: translateX(0);
   }
@@ -22,7 +22,7 @@
   }
 }
 
-@keyframes scale {
+@keyframes expanding {
   0% {
     transform: scale(1);
   }
@@ -32,7 +32,7 @@
   }
 }
 
-@keyframes sparks {
+@keyframes shining {
   0% {
     opacity: 0;
   }
@@ -40,4 +40,109 @@
   100% {
     opacity: 1;
   }
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  inline-size: 14px;
+  animation: MovingRightLeft 0.5s infinite alternate ease-in-out;
+  position: absolute;
+  inset-inline-start: -14px;
+}
+
+.theme-menu__button::after {
+  content: "";
+  display: block;
+  transform: scaleX(0);
+  height: 2px;
+  background-color: var(--accent-color);
+  transform-origin: left;
+}
+
+.theme-menu__button:focus-visible::after {
+  outline: none;
+  transform: scaleX(1);
+  transition: transform 0.3s;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+.core {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+.card__like-button::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  inset-inline-end: 0;
+  inset-block-start: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: var(--accent-color);
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: left;
+}
+
+.card__like-button:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+  transition: transform 0.5s ease-in-out;
+}
+
+.card__icon-button:hover .main-body {
+  fill: var(--accent-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.card__icon-button:hover .core {
+  fill: var(--accent-color);
+  transition: fill 0.3s linear;
+}
+
+.card__icon-button:active .main-body {
+  fill: var(--heart-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.card__icon-button:active .core {
+  fill: var(--heart-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--heart-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--heart-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--heart-color);
+  transition: fill 0.3s linear 0.06s;
+}
+
+.like-icon.is-liked .sparks {
+  animation: shining 0.3s ease-in 1 alternate 0.3s;
+}
+
+.like-icon.is-liked .heart {
+  animation: expanding 0.3s ease-in 1 alternate 0.1s;
+  transform-origin: center;
+}
+
+.like-icon .contour {
+  transition: fill linear 0.1s;
 }
