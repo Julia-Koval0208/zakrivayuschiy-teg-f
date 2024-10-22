@@ -26,7 +26,7 @@
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
           <li class="theme-menu__item">
-            <button type="button" data-theme="dark" class="theme-menu__button">
+            <button type="button" data-theme="dark" class="theme-menu__button button">
               Темно
             </button>
           </li>
@@ -35,13 +35,13 @@
               type="button"
               data-theme="auto"
               disabled
-              class="theme-menu__button"
+              class="theme-menu__button button"
             >
               Авто
             </button>
           </li>
           <li class="theme-menu__item">
-            <button type="button" data-theme="light" class="theme-menu__button">
+            <button type="button" data-theme="light" class="theme-menu__button button">
               Светло
             </button>
           </li>
@@ -114,7 +114,7 @@
               />
             </svg>
           </button>
-          <button type="button" class="card__like-button button">
+          <button type="button" class="card__like-button button button_interactive">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -180,7 +180,7 @@
               />
             </svg>
           </button>
-          <button type="button" class="card__like-button button">
+          <button type="button" class="card__like-button button button_interactive">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -240,7 +240,7 @@
               />
             </svg>
           </button>
-          <button type="button" class="card__like-button button">
+          <button type="button" class="card__like-button button button_interactive">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -303,7 +303,7 @@
               />
             </svg>
           </button>
-          <button type="button" class="card__like-button button">
+          <button type="button" class="card__like-button button button_interactive">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -364,7 +364,7 @@
               />
             </svg>
           </button>
-          <button type="button" class="card__like-button button">
+          <button type="button" class="card__like-button button button_interactive">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -422,7 +422,7 @@
               />
             </svg>
           </button>
-          <button type="button" class="card__like-button button">
+          <button type="button" class="card__like-button button button_interactive">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -482,7 +482,7 @@
               />
             </svg>
           </button>
-          <button type="button" class="card__like-button button">
+          <button type="button" class="card__like-button button button_interactive">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -546,7 +546,7 @@
               />
             </svg>
           </button>
-          <button type="button" class="card__like-button button">
+          <button type="button" class="button card__like-button button_interactive">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -556,7 +556,7 @@
           type="button"
           onclick="window['dialog-id'].showModal()"
           aria-controls="dialog-id"
-          class="memory_button button"
+          class="memory_button button button_interactive"
         >
           <svg viewBox="0 0 28 28" class="floppy_logo">
             <use href="./svg/flop.svg#floppy" />
@@ -576,9 +576,8 @@
           <button
             type="button"
             onclick="window['dialog-id'].close()"
-            class="button_dialog-close button"
-          >
-            ок
+            class="button_dialog-close button button_interactive"
+          > <span class="button__text">ок</span>
           </button>
         </dialog>
       </section>
